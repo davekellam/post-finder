@@ -211,7 +211,7 @@ class NS_Post_Finder {
 			<?php if( $recent_posts ) : ?>
 			<h4>Select a Recent <?php echo esc_html( $singular ); ?></h4>
 			<select>
-				<option value="0">Choose <?php echo esc_html( $singular_article ); echo esc_html( $singular ); ?></option>
+				<option value="0">Choose <?php echo esc_html( $singular_article ) . ' ' . esc_html( $singular ); ?></option>
 				<?php foreach( $recent_posts as $post ) : ?>
 				<option value="<?php echo intval( $post->ID ); ?>" data-permalink="<?php echo esc_attr( get_permalink( $post->ID ) ); ?>"><?php echo esc_html( $post->post_title ); ?></option>
 				<?php endforeach; ?>
@@ -219,7 +219,7 @@ class NS_Post_Finder {
 			<?php endif; ?>
 		
 			<div class="search">
-				<h4>Search for <?php echo esc_html( $singular_article ); echo esc_html( $singular ); ?></h4>
+				<h4>Search for <?php echo esc_html( $singular_article ) . ' ' . esc_html( $singular ); ?></h4>
 				<input type="text" placeholder="Enter a term or phrase">
 				<buttton class="button">Search</buttton>
 				<ul class="results"></ul>
